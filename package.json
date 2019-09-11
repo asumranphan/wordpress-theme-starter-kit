@@ -1,0 +1,24 @@
+{
+  "name": "wordpress-theme-starter-kit",
+  "version": "1.0.0",
+  "description": "A Wordpress Theme Starter Kit for creating Wordpress Theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asumranphan/wordpress-theme-starter-kit.git"
+  },
+  "keywords": [
+    "wordpress",
+    "bootstrap",
+    "theme"
+  ],
+  "author": "Anurak Sumranphan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/asumranphan/wordpress-theme-starter-kit/issues"
+  },
+  "homepage": "https://github.com/asumranphan/wordpress-theme-starter-kit"
+}
