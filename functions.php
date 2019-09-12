@@ -66,3 +66,18 @@ if ( ! function_exists( 'wordpress_theme_starter_kit_setup' ) ) {
 }
 
 add_action( 'after_setup_theme', 'wordpress_theme_starter_kit_setup' );
+
+/**
+ * Register navigation menu location.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/navigation-menus/
+ */
+function wordpress_theme_starter_kit_menus() {
+    register_nav_menus(
+        array(
+            'primary' => __( 'Primary Menu', 'wordpress-theme-starter-kit' ),
+        )
+    );
+}
+
+add_action( 'init', 'wordpress_theme_starter_kit_menus' );
