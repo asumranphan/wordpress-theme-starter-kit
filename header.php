@@ -42,6 +42,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 'theme_location' => 'primary',
                                 'container'      => '',
                                 'menu_class'     => 'navbar-nav mr-auto',
+                                'fallback_cb'    => 'WP_Bootstrap_Walker_Nav_Menu::fallback',
+                                'walker'         => new WP_Bootstrap_Walker_Nav_Menu(),
                             )
                         );
                     }

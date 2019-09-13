@@ -81,3 +81,8 @@ function wordpress_theme_starter_kit_menus() {
 }
 
 add_action( 'init', 'wordpress_theme_starter_kit_menus' );
+
+/**
+ * Register Custom Navigation Walker
+ */
+require_once get_template_directory() . '/classes/class-wp-bootstrap-walker-nav-menu.php';
