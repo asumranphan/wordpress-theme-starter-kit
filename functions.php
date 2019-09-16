@@ -83,6 +83,20 @@ function wordpress_theme_starter_kit_menus() {
 add_action( 'init', 'wordpress_theme_starter_kit_menus' );
 
 /**
+ * Remove width and height attribute out of an image.
+ *
+ * @param string $html The post thumbnail HTML.
+ */
+function remove_image_attribute( $html ) {
+
+    $html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+    return $html;
+}
+
+add_filter( 'post_thumbnail_html', 'remove_image_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_image_attribute', 10 );
+
+/**
  * Register Custom Navigation Walker
  */
 require_once get_template_directory() . '/classes/class-wp-bootstrap-walker-nav-menu.php';
