@@ -14,20 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-        <?php
-        the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
-        ?>
+        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </header>
 
     <?php if ( has_post_thumbnail() ) : ?>
         <figure class="post-thumbnail">
-            <a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-                <?php the_post_thumbnail(); ?>
-            </a>
+            <?php the_post_thumbnail(); ?>
         </figure>
     <?php endif; ?>
 
     <div class="entry-content">
-        <?php the_excerpt(); ?>
+        <?php the_content(); ?>
     </div>
 </article>
+
