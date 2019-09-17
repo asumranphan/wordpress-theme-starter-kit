@@ -104,6 +104,18 @@ function wordpress_theme_starter_kit_sidebar() {
 add_action( 'widgets_init', 'wordpress_theme_starter_kit_sidebar' );
 
 /**
+ * Enqueue scripts and styles.
+ */
+function wordpress_theme_starter_kit_scripts() {
+
+    wp_enqueue_script( 'wordpress-theme-starter-kit-scripts', get_template_directory_uri() . '/assets/js/theme.min.js', array( 'jquery' ), '1.0.0', true );
+
+    wp_enqueue_style( 'wordpress-theme-starter-kit-styles', get_template_directory_uri() . '/assets/css/theme.min.css', array(), '1.0.0' );
+}
+
+add_action( 'wp_enqueue_scripts', 'wordpress_theme_starter_kit_scripts' );
+
+/**
  * Remove width and height attribute out of an image.
  *
  * @param string $html The post thumbnail HTML.
