@@ -97,6 +97,22 @@ add_filter( 'post_thumbnail_html', 'remove_image_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_image_attribute', 10 );
 
 /**
+ * Add an additional post class.
+ *
+ * @param array $classes An array of post class names.
+ */
+function add_post_classes( $classes ) {
+
+    if ( ! is_singular() ) {
+        $classes[] = 'post-item';
+    }
+
+    return $classes;
+}
+
+add_filter( 'post_class', 'add_post_classes' );
+
+/**
  * Register Custom Navigation Walker
  */
 require_once get_template_directory() . '/classes/class-wp-bootstrap-walker-nav-menu.php';
