@@ -83,6 +83,27 @@ function wordpress_theme_starter_kit_menus() {
 add_action( 'init', 'wordpress_theme_starter_kit_menus' );
 
 /**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function wordpress_theme_starter_kit_sidebar() {
+	register_sidebar(
+		array(
+			'name'          => __( 'Sidebar', 'wordpress-theme-starter-kit' ),
+			'id'            => 'sidebar',
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'wordpress-theme-starter-kit' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+    );
+}
+
+add_action( 'widgets_init', 'wordpress_theme_starter_kit_sidebar' );
+
+/**
  * Remove width and height attribute out of an image.
  *
  * @param string $html The post thumbnail HTML.

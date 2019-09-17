@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-    <div id="primary" class="content-area">
+    <div id="primary" class="col-md-8 content-area">
 		<main id="main" class="<?php echo esc_attr( is_singular() ? 'site-main' : 'site-main posts-list' ); ?>" role="main">
 
             <?php
@@ -38,5 +38,6 @@ get_header();
     </div>
 
 <?php
+get_sidebar();
 get_footer();
 ?>
