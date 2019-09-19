@@ -137,7 +137,7 @@ add_filter( 'image_send_to_editor', 'remove_image_attribute', 10 );
 function add_post_classes( $classes ) {
 
     if ( ! is_singular() ) {
-        $classes[] = 'post-item';
+        $classes[] = 'post-item mb-3';
     }
 
     return $classes;

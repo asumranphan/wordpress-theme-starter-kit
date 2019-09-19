@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php if ( has_post_thumbnail() ) : ?>
-        <figure class="post-thumbnail">
+        <figure class="post-thumbnail mb-0 mr-3">
             <a class="post-thumbnail__link d-inline-block" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
                 <?php the_post_thumbnail(); ?>
             </a>
