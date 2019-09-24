@@ -14,12 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wordpress_theme_starter_kit_setup' ) ) {
 
     /**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     */
     function wordpress_theme_starter_kit_setup() {
         /*
          * This feature enables Theme Logo support for a theme.
@@ -88,16 +88,16 @@ add_action( 'init', 'wordpress_theme_starter_kit_menus' );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function wordpress_theme_starter_kit_sidebar() {
-	register_sidebar(
-		array(
-			'name'          => __( 'Sidebar', 'wordpress-theme-starter-kit' ),
-			'id'            => 'sidebar',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', 'wordpress-theme-starter-kit' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
+    register_sidebar(
+        array(
+            'name'          => __( 'Sidebar', 'wordpress-theme-starter-kit' ),
+            'id'            => 'sidebar',
+            'description'   => __( 'Add widgets here to appear in your sidebar.', 'wordpress-theme-starter-kit' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
     );
 }
 
