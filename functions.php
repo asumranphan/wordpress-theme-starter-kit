@@ -149,3 +149,8 @@ add_filter( 'post_class', 'add_post_classes' );
  * Register Custom Navigation Walker
  */
 require_once get_template_directory() . '/classes/class-wp-bootstrap-walker-nav-menu.php';
+
+/**
+ * Custom template tags for the theme.
+ */
+require_once get_template_directory() . '/includes/template-tags.php';
