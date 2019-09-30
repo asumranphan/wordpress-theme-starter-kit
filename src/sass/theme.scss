@@ -22,3 +22,15 @@
     border-color: transparent;
     transform: translateX(1rem);
 }
+
+.posts-list {
+    .post-item {
+        display: flex;
+        .post-thumbnail {
+            max-width: 30%;
+        }
+        .post-item__content {
+            max-width: 70%;
+        }
+    }
+}
