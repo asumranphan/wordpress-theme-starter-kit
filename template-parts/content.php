@@ -38,17 +38,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
                         <?php echo esc_html( get_the_author() ); ?>
                     </a>
-                </span>
+            </span>
             </span>
 
-            <span class="posted-on">
-                <i class="far fa-clock"></i>
-                <a class="posted-on__link" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-                    <time class="entry-date published updated" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>">
-                        <?php echo esc_html( get_the_date() ); ?>
-                    </time>
-                </a>
-            </span>
+            <?php wordpress_theme_starter_kit_posted_on(); ?>
         </div>
 
         <div class="entry-content">
