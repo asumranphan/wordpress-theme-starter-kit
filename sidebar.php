@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package WordPress_Theme_Starter_Kit
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
