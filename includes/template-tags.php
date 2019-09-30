@@ -36,3 +36,20 @@ if ( ! function_exists( 'wordpress_theme_starter_kit_posted_on' ) ) {
 		); // WPCS: XSS ok.
     }
 }
+
+if ( ! function_exists( 'wordpress_theme_starter_kit_posted_by' ) ) {
+
+	/**
+	 * Prints HTML with meta information about theme author.
+	 */
+	function wordpress_theme_starter_kit_posted_by() {
+
+		printf(
+			'<span class="byline">%1$s<span class="screen-reader-text">%2$s</span><span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
+			'<i class="fas fa-user-circle mr-2"></i>',
+			esc_html__( 'Posted by', 'wordpress-theme-starter-kit' ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_html( get_the_author() )
+		);
+	}
+}

@@ -29,18 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </header>
 
         <div class="entry-meta mb-2">
-            <span class="byline">
-                <i class="fas fa-user-circle"></i>
-                <span class="screen-reader-text">
-                    <?php esc_html_e( 'Posted by', 'wordpress-theme-starter-kit' ); ?>
-                </span>
-                <span class="author vcard">
-                    <a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
-                        <?php echo esc_html( get_the_author() ); ?>
-                    </a>
-            </span>
-            </span>
-
+            <?php wordpress_theme_starter_kit_posted_by(); ?>
             <?php wordpress_theme_starter_kit_posted_on(); ?>
         </div>
 
