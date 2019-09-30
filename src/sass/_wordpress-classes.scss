@@ -109,3 +109,15 @@ img.wp-post-image {
 	z-index: 100000;
 	/* Above WP toolbar. */
 }
+
+/* Pagination */
+.pagination {
+    margin-bottom: $spacer;
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        > * {
+            padding: ($spacer / 2) $spacer;
+        }
+    }
+}
