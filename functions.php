@@ -151,6 +151,11 @@ add_filter( 'post_class', 'add_post_classes' );
 require_once get_template_directory() . '/classes/class-wp-bootstrap-walker-nav-menu.php';
 
 /**
+ * Custom comments.
+ */
+require_once get_template_directory() . '/includes/custom-comments.php';
+
+/**
  * Custom template tags for the theme.
  */
 require_once get_template_directory() . '/includes/template-tags.php';
