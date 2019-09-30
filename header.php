@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </head>
 
     <body <?php body_class(); ?>>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light main-navigation">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <?php echo bloginfo( 'name' ); ?>

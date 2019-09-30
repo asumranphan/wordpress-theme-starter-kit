@@ -12,3 +12,13 @@
 
 // WordPress.
 @import 'wordpress-classes';
+
+.main-navigation {
+    margin-bottom: $spacer * 1.5;
+}
+
+.main-navigation .navbar-toggler {
+    position: relative;
+    border-color: transparent;
+    transform: translateX(1rem);
+}
