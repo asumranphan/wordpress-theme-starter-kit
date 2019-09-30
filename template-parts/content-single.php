@@ -17,6 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </header>
 
+    <div class="entry-meta mb-4">
+        <?php wordpress_theme_starter_kit_posted_by(); ?>
+        <?php wordpress_theme_starter_kit_posted_on(); ?>
+    </div>
+
     <?php if ( has_post_thumbnail() ) : ?>
         <figure class="post-thumbnail">
             <?php the_post_thumbnail(); ?>
