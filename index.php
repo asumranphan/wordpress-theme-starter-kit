@@ -20,7 +20,7 @@ get_header();
 ?>
 
     <div id="primary" class="col-md-8 content-area">
-		<main id="main" class="<?php echo esc_attr( is_singular() ? 'site-main' : 'site-main posts-list' ); ?>" role="main">
+        <main id="main" class="<?php echo esc_attr( is_singular() ? 'site-main' : 'site-main posts-list' ); ?>" role="main">
 
             <?php
             while ( have_posts() ) {
