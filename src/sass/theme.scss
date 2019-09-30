@@ -34,3 +34,41 @@
         }
     }
 }
+
+.widget {
+    > ul {
+        padding-left: 0;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            position: relative;
+            margin-bottom: $spacer / 2;
+            padding-left: $spacer * 2;
+        }
+
+        li::before {
+            position: absolute;
+            top: $spacer / 2.5;
+            left: $spacer / 1.75;
+            font-family: $font-awesome-family;
+            font-weight: bold;
+            font-size: $font-size-base / 2;
+            content: '\f111';
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin-top: $spacer / 2;
+        }
+    }
+
+    .widget-title {
+        margin-bottom: $spacer * 1.5;
+    }
+}
