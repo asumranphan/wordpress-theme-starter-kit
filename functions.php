@@ -93,7 +93,7 @@ function wordpress_theme_starter_kit_sidebar() {
             'name'          => __( 'Sidebar', 'wordpress-theme-starter-kit' ),
             'id'            => 'sidebar',
             'description'   => __( 'Add widgets here to appear in your sidebar.', 'wordpress-theme-starter-kit' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'before_widget' => '<section id="%1$s" class="widget %2$s mb-4">',
             'after_widget'  => '</section>',
             'before_title'  => '<h3 class="widget-title">',
             'after_title'   => '</h3>',
@@ -137,7 +137,7 @@ add_filter( 'image_send_to_editor', 'remove_image_attribute', 10 );
 function add_post_classes( $classes ) {
 
     if ( ! is_singular() ) {
-        $classes[] = 'post-item mb-3';
+        $classes[] = 'post-item mb-4';
     }
 
     return $classes;
