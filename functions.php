@@ -76,6 +76,7 @@ function wordpress_theme_starter_kit_menus() {
     register_nav_menus(
         array(
             'primary' => __( 'Primary Menu', 'wordpress-theme-starter-kit' ),
+            'footer'  => __( 'Footer Menu', 'wordpress-theme-starter-kit' ),
         )
     );
 }
