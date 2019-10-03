@@ -18,6 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
 
         <footer class="site-footer">
+            <?php if ( is_active_sidebar( 'footer' ) ) : ?>
+                <aside class="container widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'wordpress-theme-stater-kit' ); ?>">
+                    <?php dynamic_sidebar( 'footer' ); ?>
+                </aside>
+            <?php endif; ?>
+
             <div class="container site-info">
                 <a class="footer-brand" href="<?php echo esc_url( home_url() ); ?>">
                     <?php echo bloginfo( 'name' ); ?>
