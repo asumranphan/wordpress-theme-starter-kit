@@ -16,6 +16,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
             </div>
         </div>
+
+        <footer class="site-footer">
+            <div class="container site-info">
+                <a class="footer-brand" href="<?php echo esc_url( home_url() ); ?>">
+                    <?php echo bloginfo( 'name' ); ?>
+                </a>
+
+                <nav class="footer-navigation">
+                    <?php
+                    if ( has_nav_menu( 'footer' ) ) {
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer',
+                                'container'      => '',
+                                'menu_class'     => 'nav',
+                                'fallback_cb'    => 'WP_Bootstrap_Walker_Nav_Menu::fallback',
+                                'walker'         => new WP_Bootstrap_Walker_Nav_Menu(),
+                            )
+                        );
+                    }
+                    ?>
+                </nav>
+            </div>
+
+            <div class="container site-copyright">
+                <?php esc_html_e( 'Copyright © 2019 WordPress Theme Starter Kit.', 'wordpress-theme-starter-kit' ); ?>
+            </div>
+        </footer>
+
         <?php wp_footer(); ?>
     </body>
 </html>
