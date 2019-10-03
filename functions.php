@@ -100,6 +100,18 @@ function wordpress_theme_starter_kit_sidebar() {
             'after_title'   => '</h3>',
         )
     );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer', 'wordpress-theme-starter-kit' ),
+            'id'            => 'footer',
+            'description'   => __( 'Add widgets here to appear in your footer.', 'wordpress-theme-starter-kit' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s mb-4">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
 }
 
 add_action( 'widgets_init', 'wordpress_theme_starter_kit_sidebar' );
